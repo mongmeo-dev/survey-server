@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { SurveyModule } from './survey/survey.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
       driver: ApolloDriver,
       playground: true,
     }),
+    SurveyModule,
   ],
   controllers: [],
   providers: [],
