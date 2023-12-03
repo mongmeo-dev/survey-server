@@ -7,7 +7,7 @@ create table surveys
     status     item_status  not null,
     created_at timestamp    not null,
     updated_at timestamp    not null,
-    deleted_at timestamp    not null
+    deleted_at timestamp    null
 );
 
 create index surveys_status_index on surveys (status);
@@ -20,7 +20,7 @@ create table questions
     status     item_status  not null,
     created_at timestamp    not null,
     updated_at timestamp    not null,
-    deleted_at timestamp    not null
+    deleted_at timestamp    null
 );
 
 create index questions_status_index on questions (status);
@@ -35,7 +35,7 @@ create table question_choices
     status      item_status  not null,
     created_at  timestamp    not null,
     updated_at  timestamp    not null,
-    deleted_at  timestamp    not null
+    deleted_at  timestamp    null
 );
 
 create index question_choices_status_index on question_choices (status);
@@ -48,7 +48,7 @@ create table survey_answers
     status     item_status not null,
     created_at timestamp   not null,
     updated_at timestamp   not null,
-    deleted_at timestamp   not null
+    deleted_at timestamp   null
 );
 
 create index survey_answers_status_index on survey_answers (status);
@@ -62,7 +62,7 @@ create table question_answers
     status           item_status not null,
     created_at       timestamp   not null,
     updated_at       timestamp   not null,
-    deleted_at       timestamp   not null
+    deleted_at       timestamp   null
 );
 
 create index question_answers_status_index on question_answers (status);
